@@ -5,9 +5,6 @@ API yourself. It should be very similar to the provided example.
 """
 import os
 import requests
-from dotenv import load_dotenv
-
-load_dotenv()
 
 """
 All requests to the LLM require some form of a key.
