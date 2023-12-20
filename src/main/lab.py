@@ -12,7 +12,6 @@ Other sensitive data has also been hidden through environment variables.
 """
 api_key = os.environ['OPENAI_API_KEY']
 base_url = os.environ['OPENAI_API_BASE']
-deployment = os.environ['DEPLOYMENT_NAME']
 version = os.environ['OPENAI_API_VERSION']
 """
 This function sends an HTTP request to an LLM which will prompt it for some
@@ -33,7 +32,7 @@ Let's also take a look at what else is provided here.
 An API call to any other LLM may be slightly different.
 """
 def sample() :
-    res = requests.post(f"{base_url}/deployments/{deployment}/chat/completions?api-version={version}",
+    res = requests.post(f"{base_url}/chat/completions?api-version={version}",
                         headers={
                             "Content-Type": "application/json",
                             "api-key": f"{api_key}"
