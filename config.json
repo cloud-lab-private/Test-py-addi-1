@@ -1,3 +1,4 @@
 {
-  "projectType": "python"
+  "projectType":"python",
+  "vscodeExtensions":["ext1","ext2"]
 }
